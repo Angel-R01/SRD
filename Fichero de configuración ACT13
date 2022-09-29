@@ -1,0 +1,15 @@
+  GNU nano 6.2             01-network-manager-all.yaml14                       
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    enp0s3:
+      dhcp4: true
+      addresses: [192.168.15.10/24]
+      nameservers:
+        search: [angelrr.edu]
+        addresses: [192.168.15.200]
+
+
+
