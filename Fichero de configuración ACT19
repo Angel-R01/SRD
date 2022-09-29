@@ -1,0 +1,19 @@
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: true
+    enp0s8:
+      addresses:
+        - 192.168.15.10/24
+      routes:
+        - to: 192.168.15.0/24
+          via: 192.168.15.1
+          metric: 100
+      nameservers:
+        search: [angelrr.edu]
+        addresses: [192.168.15.200]
+
+
