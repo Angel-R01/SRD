@@ -1,0 +1,15 @@
+  GNU nano 6.2              01-network-manager-all.act9                        
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: false
+      addresses: [192.168.15.15/24]
+      gateway4: 192.168.19.150
+      nameservers:
+        search: [angelrr.edu]
+        addresses: [192.168.15.250]
+
+
